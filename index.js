@@ -23,6 +23,10 @@ const prompt = new MultiSelect({
 });
 
 prompt.run().then(branchesToDelete => {
+  if (branchesToDelete.length === 0) {
+    return console.log('No branches selected');
+  }
+
   const branchesStr = branchesToDelete.join(' ');
   try {
     execSync(`git branch -D ${branchesStr}`)
