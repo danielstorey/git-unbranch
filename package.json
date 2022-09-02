@@ -5,6 +5,10 @@
   "bin": "index.js",
   "author": "Daniel Storey <danielstorey@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielstorey/git-unbranch.git"
+  },
   "dependencies": {
     "enquirer": "^2.3.6"
   }
