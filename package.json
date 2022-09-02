@@ -1,0 +1,8 @@
+{
+  "name": "git-unbranch",
+  "version": "1.0.0",
+  "description": "A simple interactive CLI for cleaning up local git branches",
+  "bin": "index.js",
+  "author": "Daniel Storey <danielstorey@gmail.com>",
+  "license": "MIT"
+}
