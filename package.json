@@ -4,5 +4,8 @@
   "description": "A simple interactive CLI for cleaning up local git branches",
   "bin": "index.js",
   "author": "Daniel Storey <danielstorey@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "enquirer": "^2.3.6"
+  }
 }
