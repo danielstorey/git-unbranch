@@ -3,15 +3,23 @@
 const { execSync } = require('child_process');
 const { MultiSelect } = require('enquirer');
 
-const branches = execSync('git branch | grep -v "*"')
-  .toString()
-  .trim()
-  .split('\n')
-  .map(str => str.trim())
+function getBranches() {
+  try {
+    return execSync('git branch | grep -v "*"')
+      .toString()
+      .trim()
+      .split('\n')
+      .map(str => str.trim())
+  } catch(e) {}
+}
+
+const choices = getBranches();
+
+if (!choices) return;
 
 const prompt = new MultiSelect({
   message: 'Which branches do you wish to delete?',
-  choices: branches
+  choices: getBranches()
 });
 
 prompt.run().then(branchesToDelete => {
